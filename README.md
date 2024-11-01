@@ -1,22 +1,21 @@
 # PGN Parser and Optimizer
 
-This is a command-line tool written in Go for parsing, filtering, and optimizing chess games in PGN (Portable Game Notation) format. It allows you to filter games by player ratings (ELO), date range, and other criteria, remove specific headers or comments, concatenate multiple PGN files, and output the processed games to a new PGN file.
+This is a command-line tool written in Go for parsing, filtering, and optimizing chess games in PGN format. It allows you to filter games by player ratings (ELO), date range, and other criteria, remove specific headers or comments, concatenate multiple PGN files, and output the processed games to a new PGN file.
 
 ## Features
 
 - **Parse PGN Files:** Reads PGN files and extracts game headers and moves.
 - **Remove Empty Headers:** Option to remove headers that are empty or contain only whitespace or question marks.
 - **Remove Specific Fields:** Allows the removal of selected headers such as ECO, PlyCount, Variation, or any other custom fields.
-- **Filter by Year and ELO:** Filter games based on ELO rating or date range, and exclude games without these values if desired.
-- **Remove Comments:** Strips out comments from game moves to reduce file size and simplify game records.
+- **Filter by Year and ELO:** Filter games based on ELO rating or date range, and exclude games without these values.
+- **Remove Comments:** Strip out comments from game moves to reduce file size and simplify game records.
 - **Concatenate PGN Files:** Option to recursively search a directory for PGN files, concatenate them, and process as a single file.
-- **Save Processed Games:** Output the modified games to a new PGN file.
 
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/pgn-parser-optimizer.git
+   git clone https://github.com/Pythoript/PGN-Optimizer.git
    ```
 2. Install dependencies:
    ```bash
