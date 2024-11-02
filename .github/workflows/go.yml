@@ -1,0 +1,44 @@
+name: Build PGN-Optimizer
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build PGN-Optimizer on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest, fedora-latest]
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
+
+      - name: Set up Go 1.23.0
+        uses: actions/setup-go@v4
+        with:
+          go-version: 1.23.0
+
+      - name: Install Dependencies
+        run: |
+          go get github.com/fatih/color
+          go get github.com/jessevdk/go-flags
+
+      - name: Build PGN-Optimizer
+        run: go build -o pgn-optimizer index.go
+
+      - name: Upload Build Artifact
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: pgn-optimizer-${{ matrix.os }}
+          path: pgn-optimizer
+          retention-days: 5
+
+      - name: Display success message
+        run: echo "Build completed for ${{ matrix.os }}"
