@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest, fedora-latest]
+        os: [ubuntu-latest, macos-latest, windows-latest]
 
     steps:
       - name: Check out the repository
