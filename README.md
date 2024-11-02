@@ -67,10 +67,4 @@ This is a command-line tool written in Go for parsing, filtering, and optimizing
   ./pgn-parser --concat --output all_games.pgn /path/to/pgn/files
   ```
 
-## License
-
-This project is licensed under the MIT License.
-
----
-
 This tool is ideal for chess enthusiasts and developers working with large PGN files who want to filter, clean, and optimize game data. Contributions are welcome!
