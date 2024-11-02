@@ -19,12 +19,13 @@ This is a command-line tool written in Go for parsing, filtering, and optimizing
    ```
 2. Install dependencies:
    ```bash
+   go mod init PGN-Optimizer
    go get github.com/fatih/color
    go get github.com/jessevdk/go-flags
    ```
 3. Build the project:
    ```bash
-   go build -o pgn-parser
+   go build index.go -o pgn-parser
    ```
 
 ## Usage
