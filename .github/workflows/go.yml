@@ -34,7 +34,7 @@ jobs:
 
       - name: Upload Build Artifact
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: pgn-optimizer-${{ matrix.os }}
           path: pgn-optimizer
@@ -42,3 +42,6 @@ jobs:
 
       - name: Display success message
         run: echo "Build completed for ${{ matrix.os }}"
+
+# Project Tags:
+# golang, chess, optimization, optimizer, chess-database, pgn-parser, pgn-optimizer
